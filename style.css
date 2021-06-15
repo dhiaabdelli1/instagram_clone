@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root {
+    --ig-grey: #fafafa;
+    --ig-border-color: rgb(206, 204, 204);
+    --ig-blue: #458eff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding-top: 85px;
+    padding-bottom: 100px;
+}
+
+body {
+    background: var(--ig-grey);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    background: white;
+    border-bottom: solid 1.5px var(--ig-border-color);
+    padding: 0 150px;
+}
+
+.fixed-header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 22%;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.header-search-input {
+    margin-left: 15%;
+    margin-right: 15%;
+    border: solid 1.5px var(--ig-border-color);
+    outline: none;
+    height: 4vh;
+    width: 33vh;
+    border-radius: 3px;
+    background: var(--ig-grey);
+    text-align: center;
+}
+
+.header-search-input::placeholder {
+    color: rgba(0, 0, 0, .3);
+}
+
+.header-ig-logo {
+    margin-right: 8%;
+    margin-top: 10px;
+}
+
+.home-body-container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.stories {
+    height: 15vh;
+    background: white;
+    border: 1.5px solid var(--ig-border-color);
+    margin-bottom: 20px;
+}
+
+.posts-feed {
+    height: 200vh;
+}
+
+.news-feed {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.like-post-btn,
+.comment-post-btn,
+.share-post-btn,
+.save-post-btn,
+.card-options,
+.emoji-btn {
+    border: none;
+    background: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.suggestions-container {
+    height: 100vh;
+    width: 22%;
+    padding: 10px 20px;
+    top: 14%;
+    right: 14%;
+    position: fixed;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1.5px solid var(--ig-border-color);
+    margin-bottom: 50px;
+}
+
+.card-header,
+.card-cta,
+.card-caption,
+.card-comment,
+.card-comment-info,
+.author-info,
+.stories,
+.card-reacts {
+    display: flex;
+    align-items: center;
+}
+
+.stories {
+    overflow-y: auto;
+    overflow: hidden;
+}
+
+.card-cta {
+    justify-content: space-between;
+    padding: 0 15px;
+    padding-top: 10px;
+}
+
+.ig-react {}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-header {
+    justify-content: space-between;
+    padding: 7px 20px;
+}
+
+.author-img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.suggested-profile-img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.profile-switch-pic {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.header-profile-pic {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.card-reacts-img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.stories {
+    padding: 0 20px;
+}
+
+.story-user-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    position: relative;
+    border-radius: 50px;
+    margin-right: 15px;
+    background: linear-gradient(45deg, gold, fuchsia);
+    background-clip: padding-box;
+    padding: 3px;
+}
+
+.story-user-handle {
+    font-size: 10px;
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+.post-location {
+    font-size: 14px;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-handle-caption,
+.card-comment-author {
+    margin-right: 2px;
+    font-size: 14px;
+    font-weight: bolder;
+    margin: 0 10px;
+}
+
+.card-reacts-txt {
+    font-size: 14px;
+}
+
+.card-reacts {
+    align-items: center;
+    padding: 10px;
+}
+
+.card-time {
+    margin: 5px 10px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .4);
+}
+
+.card-comment-cta:before {
+    content: '';
+    width: 100%;
+    border-top: solid 1px var(--ig-border-color);
+    position: absolute;
+    left: 0;
+    bottom: 90%;
+    z-index: 1;
+}
+
+.card-comment-cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+
+.card-comment-txt-input {
+    height: 6vh;
+    width: 85%;
+    border: none;
+    outline: none;
+}
+
+.card-comment-txt-input::placeholder {
+    color: rgba(0, 0, 0, .5)
+}
+
+.card-comment-btn,
+.suggested-follow-btn,
+.switch-btn {
+    color: var(--ig-blue);
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.see-all-btn {
+    color: black;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card-comment-emoji {
+    width: 30px;
+    height: 30px;
+}
+
+.profile-switch,
+.suggestions-title,
+.suggested-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.suggested-profile-left,
+.profile-switch-left {
+    display: flex;
+    align-items: center;
+}
+
+.profile-switch-user,
+.suggested-profile-user {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.profile-switch-user2,
+.suggested-profile-extra-info {
+    color: rgba(0, 0, 0, .5);
+    font-size: 15px;
+}
+
+.suggestions-title-txt {
+    color: rgba(0, 0, 0, .5);
+    font-weight: bold;
+}
+
+.about-links {
+    color: rgba(0, 0, 0, .5);
+    font-size: 11px;
+    margin: 20px 0;
+}
+
+.trademark-txt {
+    color: rgba(0, 0, 0, .5);
+    font-size: 11px;
+    margin: 20px 0;
+}
+
+.suggestions-title {
+    margin: 20px 0;
+}
+
+.about-links,
+.trademark-txt {
+    color: rgba(0, 0, 0, .3);
+}
